@@ -20,6 +20,7 @@ $(document).ready(function(){
   // Initial query
   $("button").on("click", function(e){
     e.preventDefault();
+    $(".giphy_container").html("");
     getGiphy(0);
   })
 })
@@ -30,6 +31,6 @@ $(document).ready(function(){
     var currentScroll = $(window).height() + $(window).scrollTop();
     var triggerPoint = $(document).height() - 200;
     if ((currentScroll >= triggerPoint) && (alreadyLoading == false)) {
-        getGiphy(offsetNow);
+      getGiphy(offsetNow);
     }
   });
